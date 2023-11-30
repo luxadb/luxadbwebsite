@@ -1,0 +1,319 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+	background-color: #010508;
+	padding-top: 100px;
+  height: 100vh;
+  width: 100vw;
+  padding-bottom: 30px;
+}
+
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 40px 5%;
+	background: transparent;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+}
+
+
+/*LOGO*/
+.logo {
+    font-family: "Montserrat", sans-serif;
+    font-size: 45px;
+    font-weight: 800;
+    text-decoration: none;
+    display: flex;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .logo:hover{
+      transform: scale(1.1);
+  }
+  
+  .logo .lux {
+    color: rgb(233, 172, 18);
+  }
+  .logo .adb {
+    color: rgb(250, 247, 236);
+  }
+
+
+
+  /*NAVIGATION*/
+nav{
+	display: flex;
+	justify-content: center;
+	justify-items: center;
+	text-align: center;
+	text-transform: uppercase;
+	align-items: center;
+	font-weight: 500;
+	width: 60%;
+}
+
+.menu a{
+	font-size: 18px;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: 500;
+	margin: 0 20px;
+}
+
+.menu ul{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+}
+
+.menu * {
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+  }
+  
+  .menu li {
+    display: inline-block;
+    list-style: outside none none;
+    margin: 0 1.5em;
+    overflow: hidden;
+  }
+  .menu a {
+    padding: 0.3em 0;
+    color: #fffafa;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 1px;
+    margin: 0;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  .menu a:before,
+  .menu a:after {
+    position: absolute;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+  }
+  .menu a:before {
+    bottom: 100%;
+    display: block;
+    height: 3px;
+    width: 100%;
+    content: "";
+    background-color: rgb(233, 172, 18);
+  }
+  .menu a:after {
+    padding: 0.3em 0;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    content: attr(data-hover);
+    color: #ffffff;
+    white-space: nowrap;
+  }
+  .menu li:hover a,
+  .menu .current a {
+    transform: translateY(100%);
+  }
+
+
+  /*SOCIAL MEADIA*/
+.social-media{
+	display: flex;
+	justify-content: flex-end;
+	width: auto;
+	list-style: none;	
+}
+
+.social-media li {
+	margin: 5px;
+}
+
+.social-media li a{
+	display: inline-block;
+	text-align: center;
+	overflow: hidden;
+}
+
+.social-media li a i{
+	color: white;
+	transform: translateY(0);
+	transition: .3s;
+	font-size: 20px;
+}
+
+.social-media li:hover a i{
+	transform: translateY(-100%);
+}
+
+.social-media li a i::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateY(100%);
+}
+
+.social-media li:nth-child(1) a i::after {
+	content: '\f16d';
+	color: #833AB4;
+}
+
+.social-media li:nth-child(2) a i::after {
+	content: '\f09a';
+	color: #3b5998 ;
+}
+
+.social-media li:nth-child(3) a i::after {
+	content: '\e61a';
+	color: black;
+}
+
+.social-media li:nth-child(4) a i::after {
+	content: '\f1b4';
+	color: #131418;
+}
+
+.social-media li:nth-child(5) a i::after {
+	content: '\e07b';
+	color: #00f2ea;
+}
+
+.social-media li:nth-child(6) a i::after {
+	content: '\f167';
+	color: #FF0000;
+}
+
+/*PORTFOLIO*/
+.Portfolio_grid{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-evenly;
+    height: 50%;
+    width: 100%;
+    gap: 20px;
+    padding: 50px 50px 0px 50px;
+    /* border: 1px solid cornflowerblue; */
+  }
+  
+  .single_grid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    border: solid 1px chocolate;
+  }
+  
+  .single_grid h1{
+    font-size: 23px;
+    color: #ffffff;
+  }
+  
+  .single_grid button {
+    font-size: 25px;
+    padding: 15px;
+    background: transparent;
+    border: 1px solid black;
+  }
+  
+  .Portfolio_grid div:nth-child(1){
+    background-image: url(/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 99;
+    border: solid 1px chocolate;
+  }
+  .Portfolio_grid div:nth-child(2){
+    background-image: url(/images/Portfolio/editorial.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .Portfolio_grid div:nth-child(3){
+    background-image: url(/images/Portfolio/graduation.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .Portfolio_grid div:nth-child(4){
+    background-image: url(/images/Portfolio/brand.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+
+
+  /*ABOUTME*/
+.about{
+	height: 85vh;
+	display:flex;
+	align-items: center;
+	padding: 0 10%;
+	background: url(/images/profile.png);
+	background-position: top right;
+	background-size: cover;
+}
+
+.about-content {
+	max-width: 600px;
+}
+
+
+.about-content h1 {
+	font-size: 56px;
+	font-weight: 700;
+	line-height: 1.2;
+  color: #FFFFFF;
+}
+
+.about-content h3 {
+	font-size: 32px;
+	font-weight: 700;
+	color: rgb(233, 172, 18);
+}
+
+.about-content p{
+	font-size: 20px;
+	margin: 20px 0 40px;
+  color: #fffafa;
+}
+
+.about-content .btn-box{
+	width: 345px;
+	height: 50px;
+}
+
+.btn-box a {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 150px;
+	height: 100%;
+	background-color: rgb(233, 172, 18);
+	border: 2px solid rgb(233, 172, 18);
+	border-radius: 8px;
+	font-size: 20px;
+	text-decoration: none;
+	font-weight: 600;
+	letter-spacing: 1px;
+  color: #FFFFFF;
+}
