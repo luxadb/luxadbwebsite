@@ -200,6 +200,21 @@ nav {
   color: #ff0000;
 }
 
+/* HOME */
+
+/* .container {
+  position: relative;
+  width: 20px;
+}
+.home-content {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border: 1px solid blue;
+  z-index: 99;
+  background-color: red;
+} */
+
 /*PORTFOLIO*/
 .Portfolio_grid {
   display: flex;
@@ -275,10 +290,13 @@ nav {
 
 /*ABOUTME*/
 .about {
-  height: 85vh;
+  height: 100%;
   display: flex;
   align-items: center;
-  padding: 5% 10%;
+  /* padding: 5% 10%; */
+  padding: 100px 100px 0px 100px;
+  margin-top: 20px;
+  /* border: 1px solid red; */
 }
 
 .about-content {
@@ -293,6 +311,12 @@ nav {
 
 .about-text {
   max-width: 600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  /* border: 1px solid green; */
 }
 .about-content h1 {
   font-size: 56px;
